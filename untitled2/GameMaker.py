@@ -5,7 +5,6 @@ import os
 import re
 import Game
 import StatPlayer
-import RenewPlayerInfo
 import random
 from datetime import datetime, date, time
 import shutil
@@ -14,8 +13,8 @@ import shutil
 #    players=playersLine[0:-2].split(" ")
 #    playerList=[]
 #    #
-#    #gameStat=RenewPlayerInfo.RenewPlayerInfo(f)
-#    gameStat=StatPlayer.RenewPlayerInfo(f)
+#    #gameStat=renew_player_info.renew_player_info(f)
+#    gameStat=StatPlayer.renew_player_info(f)
 #    if gameStat!=0:
 #        for prePlayer in players:
 #            midPlayer=""
@@ -84,11 +83,11 @@ import shutil
 #    #shutil.move("path/to/current/"+f.name, "path/to/new/destination/for/"+f.name)
 
 
-def TestMakeGameFile():
+def test_make_game_file():  #Создает тестовые записи в БД для работы сайта.
     i = 1
-    numberOfGames = 30
+    number_of_games = 30
     games = []
-    while i < numberOfGames:
+    while i < number_of_games:
         GUID = 'new'
         tournament = 'test'
         time = str(datetime.now().date())
@@ -114,8 +113,8 @@ def TestMakeGameFile():
         connection.commit()
 
 
-#Извлечение нужных файлов с играми, их открытие на чтение, считывание имен игроков(первой строки файла) и передача на детальный анализ игры в MakePersonalFile
-#def MakeScoreFile (DirList):
+#Извлечение нужных файлов с играми, их открытие на чтение, считывание имен игроков(первой строки файла) и передача на детальный анализ игры в make_personal_file
+#def make_score_file (DirList):
 #    for Dir in DirList:
 #        for top, dir, files in os.walk(Dir):
 #            print (files)
@@ -129,7 +128,7 @@ def TestMakeGameFile():
 #                    f=open(Dir+"/"+file, 'r', encoding="cp1251")
 #                    playersLine=f.readline()
 #                print (f.name,str(playersLine))
-#                playerList=MakePersonalFile(playersLine,f)
+#                playerList=make_personal_file(playersLine,f)
 #        print("________________________________________________________________________________________")
 
 
@@ -143,12 +142,12 @@ try:
 except:
     print("database access denied")
 i = 1
-TestMakeGameFile()
+test_make_game_file()
 #while 1>0:
 #if ((datetime.now().hour==22) & (datetime.now().minute==00) & (datetime.now().second==00)) | (i==1):
 dirList = []
 #print ("0")
-#Поиск папок с играми и передача на обработку в MakeScoreFile
+#Поиск папок с играми и передача на обработку в make_score_file
 #print ("/home/name1/tennis\ analitics")
 #for top, dirs, files in os.walk("/home/name1/tennis analitics"):
 ##for top, dirs, files in os.walk("/home/programm"):
@@ -156,11 +155,10 @@ dirList = []
 #    if (namecheck.match(top)!=None):
 #        #print(top)
 #		dirList.append(top)
-#MakeScoreFile(dirList)
+#make_score_file(dirList)
 #destion="/home/name1/tennis analitics/archive"
 ##destion="/home/programm/archive"
 #for dir in dirList:
 #    print (dir)
 #    shutil.move(dir,destion)
 #i=1
-

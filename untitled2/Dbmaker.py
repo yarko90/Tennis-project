@@ -5,42 +5,41 @@ import os
 import re
 import Player
 import StatPlayer
-import RenewPlayerInfo
 from datetime import datetime, date, time
 import shutil
 # Обработка информации из файла, обновление статистики по игрокам в БД
 
 
-def MakePersonalFile(playersLine, f):
+def make_personal_file(playersLine, f):
     players = playersLine[0:-2].split(" ")
-    playerList = []
-    # gameStat=RenewPlayerInfo.RenewPlayerInfo(f)
-    gameStat = StatPlayer.RenewPlayerInfo(f)
-    if gameStat != 0:
-        for prePlayer in players:
-            midPlayer = ""
-            for letter in prePlayer:
+    player_list = []
+    # game_stat=renew_player_info.renew_player_info(f)
+    game_stat = StatPlayer.renew_player_info(f)
+    if game_stat != 0:
+        for pre_player in players:
+            mid_player = ""
+            for letter in pre_player:
                 if (letter != ","):
                     if (letter == "-" or letter == "/" or letter == " " or letter == "." or letter == "," or letter == "'"):
-                        midPlayer = midPlayer + " "
+                        mid_player = mid_player + " "
                     else:
-                        midPlayer = midPlayer + letter
-            playerName = midPlayer
-            midPlayer = ""
+                        mid_player = mid_player + letter
+            player_name = mid_player
+            mid_player = ""
             try:
                 cur.execute(
                     """SELECT "name","GUID","total_games", "win_rate", "svoi_podachi", "chuz_podachi", "set_rate", "game_rate", "break_point" FROM one_player WHERE "name"=%s""",
-                    (playerName,))
+                    (player_name,))
                 #print (cur.fetchone())#total_games=str(int(cur.fetchone()[0])+1)
                 PInfo = cur.fetchone()
                 player = Player.Player(PInfo[1], PInfo[0], str(int(PInfo[2]) + 1), PInfo[3], PInfo[4], PInfo[5],
                                        PInfo[6], PInfo[7], PInfo[8])
                 connection.commit()
                 #print ("Selected", player.name)
-                #cur.execute("""UPDATE playerbase SET "TotalGames"=%s WHERE "Name"=%s""", (total_games,playerName,))
+                #cur.execute("""UPDATE playerbase SET "TotalGames"=%s WHERE "Name"=%s""", (total_games,player_name,))
                 #print("EXIST -> ", total_games)
             except:
-                player = Player.Player("new", playerName, "1", "0/0", "0/0", "0/0", "0/0", "0/0", "0")
+                player = Player.Player("new", player_name, "1", "0/0", "0/0", "0/0", "0/0", "0/0", "0")
                 cur.execute(
                     """INSERT INTO one_player ("name","GUID","total_games", "win_rate", "svoi_podachi", "chuz_podachi", "set_rate", "game_rate", "break_point") VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)""",
                     (player.name, player.GUID, player.total_games, player.win_rate, player.svoi_podachi,
@@ -50,54 +49,54 @@ def MakePersonalFile(playersLine, f):
                 #print ("Created", player.name)
             finally:
                 connection.commit()
-                playerList.append(player)
+                player_list.append(player)
                 #print (player)
         #Обновление геймов
-        P1Sv = str(int(playerList[0].svoi_podachi.split("/")[0]) + gameStat[2][0]) + "/" + str(
-            int(playerList[0].svoi_podachi.split("/")[1]) + gameStat[3][1])
-        P1Ch = str(int(playerList[0].chuz_podachi.split("/")[0]) + gameStat[3][0]) + "/" + str(
-            int(playerList[0].chuz_podachi.split("/")[1]) + gameStat[2][1])
-        P2Sv = str(int(playerList[1].svoi_podachi.split("/")[0]) + gameStat[2][1]) + "/" + str(
-            int(playerList[1].svoi_podachi.split("/")[1]) + gameStat[3][0])
-        P2Ch = str(int(playerList[1].chuz_podachi.split("/")[0]) + gameStat[3][1]) + "/" + str(
-            int(playerList[1].chuz_podachi.split("/")[1]) + gameStat[2][0])
+        p1_sv = str(int(player_list[0].svoi_podachi.split("/")[0]) + game_stat[2][0]) + "/" + str(
+            int(player_list[0].svoi_podachi.split("/")[1]) + game_stat[3][1])
+        p1_ch = str(int(player_list[0].chuz_podachi.split("/")[0]) + game_stat[3][0]) + "/" + str(
+            int(player_list[0].chuz_podachi.split("/")[1]) + game_stat[2][1])
+        p2_sv = str(int(player_list[1].svoi_podachi.split("/")[0]) + game_stat[2][1]) + "/" + str(
+            int(player_list[1].svoi_podachi.split("/")[1]) + game_stat[3][0])
+        p2_ch = str(int(player_list[1].chuz_podachi.split("/")[0]) + game_stat[3][1]) + "/" + str(
+            int(player_list[1].chuz_podachi.split("/")[1]) + game_stat[2][0])
         #Обновление винрейта
-        if (gameStat[0] == 1):
-            P1WR = str(int(playerList[0].win_rate.split("/")[0]) + 1) + "/" + str(
-                int(playerList[0].win_rate.split("/")[1]))
-            P2WR = str(int(playerList[1].win_rate.split("/")[0])) + "/" + str(
-                int(playerList[1].win_rate.split("/")[1]) + 1)
-        elif (gameStat[0] == 2):
-            P1WR = str(int(playerList[0].win_rate.split("/")[0])) + "/" + str(
-                int(playerList[0].win_rate.split("/")[1]) + 1)
-            P2WR = str(int(playerList[1].win_rate.split("/")[0]) + 1) + "/" + str(
-                int(playerList[1].win_rate.split("/")[1]))
+        if (game_stat[0] == 1):
+            p1_wr = str(int(player_list[0].win_rate.split("/")[0]) + 1) + "/" + str(
+                int(player_list[0].win_rate.split("/")[1]))
+            p2_wr = str(int(player_list[1].win_rate.split("/")[0])) + "/" + str(
+                int(player_list[1].win_rate.split("/")[1]) + 1)
+        elif (game_stat[0] == 2):
+            p1_wr = str(int(player_list[0].win_rate.split("/")[0])) + "/" + str(
+                int(player_list[0].win_rate.split("/")[1]) + 1)
+            p2_wr = str(int(player_list[1].win_rate.split("/")[0]) + 1) + "/" + str(
+                int(player_list[1].win_rate.split("/")[1]))
         #Обновление сетрейта
-        P1Se = str(int(playerList[0].set_rate.split("/")[0]) + gameStat[1][0]) + "/" + str(
-            int(playerList[0].set_rate.split("/")[1]) + gameStat[1][1])
-        P2Se = str(int(playerList[1].set_rate.split("/")[0]) + gameStat[1][1]) + "/" + str(
-            int(playerList[1].set_rate.split("/")[1]) + gameStat[1][0])
+        p1_sr = str(int(player_list[0].set_rate.split("/")[0]) + game_stat[1][0]) + "/" + str(
+            int(player_list[0].set_rate.split("/")[1]) + game_stat[1][1])
+        p2_sr = str(int(player_list[1].set_rate.split("/")[0]) + game_stat[1][1]) + "/" + str(
+            int(player_list[1].set_rate.split("/")[1]) + game_stat[1][0])
         #Обновление Брейк Поинтов
-        P1BP = str(int(playerList[0].break_point) + gameStat[4][0])
-        P2BP = str(int(playerList[1].break_point) + gameStat[4][1])
-        #elif (gameStat[10]==0): удалено так как StatPlayer теперь возвращает ошибку, если матч не окончен. (возможно, не работает при игре 2/2)
-        #    P1WR=playerList[0].win_rate
-        #    P2WR=playerList[1].win_rate
+        p1_bp = str(int(player_list[0].break_point) + game_stat[4][0])
+        p2_bp = str(int(player_list[1].break_point) + game_stat[4][1])
+        #elif (game_stat[10]==0): удалено так как StatPlayer теперь возвращает ошибку, если матч не окончен. (возможно, не работает при игре 2/2)
+        #    p1_wr=player_list[0].win_rate
+        #    p2_wr=player_list[1].win_rate
 
-        P1 = Player.Player(playerList[0].GUID, playerList[0].name, playerList[0].total_games, P1WR, P1Sv, P1Ch, P1Se,
-                           "0/0", P1BP)
-        P2 = Player.Player(playerList[1].GUID, playerList[1].name, playerList[1].total_games, P2WR, P2Sv, P2Ch, P2Se,
-                           "0/0", P2BP)
+        p1 = Player.Player(player_list[0].GUID, player_list[0].name, player_list[0].total_games, p1_wr, p1_sv, p1_ch, p1_sr,
+                           "0/0", p1_bp)
+        p2 = Player.Player(player_list[1].GUID, player_list[1].name, player_list[1].total_games, p2_wr, p2_sv, p2_ch, p2_sr,
+                           "0/0", p2_bp)
         cur.execute(
             """UPDATE one_player SET "total_games"=%s, "win_rate"=%s, "svoi_podachi"=%s, "chuz_podachi"=%s, "set_rate"=%s, "game_rate"=%s, "break_point"=%s WHERE "name"=%s""",
-            (P1.total_games, P1WR, P1.svoi_podachi, P1.chuz_podachi, P1.set_rate, P1.game_rate, P1.break_point,
-             P1.name,))
+            (p1.total_games, p1_wr, p1.svoi_podachi, p1.chuz_podachi, p1.set_rate, p1.game_rate, p1.break_point,
+             p1.name,))
         connection.commit()
         #print("Update 1")
         cur.execute(
             """UPDATE one_player SET "total_games"=%s, "win_rate"=%s, "svoi_podachi"=%s, "chuz_podachi"=%s, "set_rate"=%s, "game_rate"=%s, "break_point"=%s WHERE "name"=%s""",
-            (P2.total_games, P2WR, P2.svoi_podachi, P2.chuz_podachi, P2.set_rate, P2.game_rate, P2.break_point,
-             P2.name,))
+            (p2.total_games, p2_wr, p2.svoi_podachi, p2.chuz_podachi, p2.set_rate, p2.game_rate, p2.break_point,
+             p2.name,))
         connection.commit()
         #print("Update 2")
         #cur.execute("""SELECT """"")
@@ -108,8 +107,8 @@ def MakePersonalFile(playersLine, f):
         #shutil.move("path/to/current/"+f.name, "path/to/new/destination/for/"+f.name)
 
 
-# Извлечение нужных файлов с играми, их открытие на чтение, считывание имен игроков(первой строки файла) и передача на детальный анализ игры в MakePersonalFile
-def MakeScoreFile(DirList):
+# Извлечение нужных файлов с играми, их открытие на чтение, считывание имен игроков(первой строки файла) и передача на детальный анализ игры в make_personal_file
+def make_score_file(DirList):
     for Dir in DirList:
         for top, dir, files in os.walk(Dir):
             print(files)
@@ -117,13 +116,13 @@ def MakeScoreFile(DirList):
                 #f=open(Dir+"\\"+file, 'r', encoding="utf-8")
                 try:
                     f = open(Dir + "/" + file, 'r', encoding="utf-8")
-                    playersLine = f.readline()
+                    players_line = f.readline()
                 except UnicodeDecodeError:
                     f.close()
                     f = open(Dir + "/" + file, 'r', encoding="cp1251")
-                    playersLine = f.readline()
-                print(f.name, str(playersLine))
-                playerList = MakePersonalFile(playersLine, f)
+                    players_line = f.readline()
+                print(f.name, str(players_line))
+                playerList = make_personal_file(players_line, f)
         print("________________________________________________________________________________________")
 
 
@@ -140,16 +139,18 @@ while 1 > 0:
     if ((datetime.now().hour == 22) & (datetime.now().minute == 00) & (datetime.now().second == 00)) | (i == 1):
         dirList = []
         print("0")
-        #Поиск папок с играми и передача на обработку в MakeScoreFile
+        #Поиск папок с играми и передача на обработку в make_score_file
         print("/home/name1/tennis\ analitics")
-        for top, dirs, files in os.walk("/home/name1/tennis analitics"):
-            #for top, dirs, files in os.walk("/home/programm"):
+        #for top, dirs, files in os.walk("/home/name1/tennis analitics"):
+        #for top, dirs, files in os.walk("/home/programm"):
+        for top, dirs, files in os.walk("E:\\tennis analitics"):
             namecheck = re.compile(r".+MSK_2015")
             if (namecheck.match(top) != None):
                 #print(top)
                 dirList.append(top)
-        MakeScoreFile(dirList)
-        destion = "/home/name1/tennis analitics/archive"
+        make_score_file(dirList)
+        destion = "E:\\tennis analitics\\archive"
+        #destion = "/home/name1/tennis analitics/archive"
         #destion="/home/programm/archive"
         for dir in dirList:
             print(dir)

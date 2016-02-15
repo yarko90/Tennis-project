@@ -1,7 +1,7 @@
 __author__ = 'например Андрей'
 
 
-def RenewPlayerInfo(f):
+def renew_player_info(f):
     i = 0
     P1MemScore = []
     P1MemScore.append("0:0")

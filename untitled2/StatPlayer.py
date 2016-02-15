@@ -2,7 +2,7 @@ __author__ = 'например Андрей'
 import re
 
 
-def GameScore(line):
+def game_score(line):
     if re.search(r"A", line):
         line = re.sub(r"A", "41", line)
     if re.search(r"\(\d+\:\d+\)", line):
@@ -22,84 +22,82 @@ def GameScore(line):
     return game_score
 
 
-def RenewPlayerInfo(f):
+def renew_player_info(f):
     # print (f.name)
     i = 0
-    P1MemScore = []
-    P1MemScore.append("0:0")
-    P2MemScore = []
-    P2MemScore.append("0:0")
-    svoiWin = [0, 0]
-    chuzWin = [0, 0]
-    gameScore = 0
-    winPoint = 0
-    setWin = [0, 0]
-    gameWin = [0, 0]
-    P1GameCoef = 0
-    P2GameCoef = 0
-    breakPointCount = [0, 0]
-    Lines = f.readlines()
-    FileLen = len(Lines)  # Это нужно для правильной работы. Повторный вызов len() выводит результат = 0.
-    if FileLen > 0:
-        EndLine = Lines[-1]
-        #определение победителя winPoint
-        if (EndLine[-2] == "-") & (EndLine[0] != "0:0"):
-            if (int(EndLine[0:3].split(":")[0]) == int(EndLine[0:3].split(":")[1])) | (
-                        (int(EndLine[0:3].split(":")[0]) + int(EndLine[0:3].split(":")[1])) < 2):
-                winPoint = 0  # в случае неоконченного матча
-            elif (int(EndLine[0:3].split(":")[0]) > int(EndLine[0:3].split(":")[1])):
-                winPoint = 1
-            elif (int(EndLine[0:3].split(":")[0]) < int(EndLine[0:3].split(":")[1])):
-                winPoint = 2
-                #print(EndLine," ", winPoint)
+    p1_mem_score = ["0:0"]
+    p2_mem_score = ["0:0"]
+    svoi_win = [0, 0]
+    chuz_win = [0, 0]
+    game_score = 0
+    win_point = 0
+    set_win = [0, 0]
+    game_win = [0, 0]
+    p1_game_coef = 0
+    p2_game_coef = 0
+    break_point_count = [0, 0]
+    lines = f.readlines()
+    file_len = len(lines)  # Это нужно для правильной работы. Повторный вызов len() выводит результат = 0.
+    if file_len > 0:
+        end_line = lines[-1]
+        #определение победителя win_point
+        if (end_line[-2] == "-") & (end_line[0] != "0:0"):
+            if (int(end_line[0:3].split(":")[0]) == int(end_line[0:3].split(":")[1])) | (
+                        (int(end_line[0:3].split(":")[0]) + int(end_line[0:3].split(":")[1])) < 2):
+                win_point = 0  # в случае неоконченного матча
+            elif (int(end_line[0:3].split(":")[0]) > int(end_line[0:3].split(":")[1])):
+                win_point = 1
+            elif (int(end_line[0:3].split(":")[0]) < int(end_line[0:3].split(":")[1])):
+                win_point = 2
+                #print(end_line," ", win_point)
             #определение счета по сетам P1setWin, P2setWin и по геймам P1GameWin P2GameWin
-        if winPoint != 0:
-            sets = EndLine[5:-6].split(", ")
+        if win_point != 0:
+            sets = end_line[5:-6].split(", ")
             if len(sets) > 1:
                 for set in sets:
                     if (int(set.split(":")[0]) > int(set.split(":")[1])):
-                        setWin[0] = setWin[0] + 1
+                        set_win[0] = set_win[0] + 1
                     if (int(set.split(":")[0]) < int(set.split(":")[1])):
-                        setWin[1] = setWin[0] + 1
-                    gameWin[0] = gameWin[0] + int(set.split(":")[0])
-                    gameWin[1] = gameWin[1] + int(set.split(":")[1])
-                    #print(EndLine," ", winPoint, " ",setWin[0],"/",setWin[1]," ",gameWin[0],"/",gameWin[1])
+                        set_win[1] = set_win[0] + 1
+                    game_win[0] = game_win[0] + int(set.split(":")[0])
+                    game_win[1] = game_win[1] + int(set.split(":")[1])
+                    #print(end_line," ", win_point, " ",set_win[0],"/",set_win[1]," ",game_win[0],"/",game_win[1])
                 #Процент побед в геймах на своей подаче, на чужой подаче (Брейк) и Брейк-поинтов.
-            for Line in Lines:
+            for line in lines:
                 if i > 1:
-                    #print("i=",i," Line: ",Lines[i-1])
-                    gameScore = GameScore(Line)
-                    past_gameScore = GameScore(Lines[i - 1])
-                    if (gameScore != "fail") & (past_gameScore != "fail") & (past_gameScore != gameScore):
+                    #print("i=",i," line: ",lines[i-1])
+                    game_score = game_score(line)
+                    past_gameScore = game_score(lines[i - 1])
+                    if (game_score != "fail") & (past_gameScore != "fail") & (past_gameScore != game_score):
                         #print (past_gameScore)
-                        #print(gameScore," ",past_gameScore)
+                        #print(game_score," ",past_gameScore)
                         if (int(past_gameScore[0]) > int(past_gameScore[1])) & (
-                                    int(gameScore[2]) > int(past_gameScore[2])):
-                            svoiWin[0] = svoiWin[0] + 1
+                                    int(game_score[2]) > int(past_gameScore[2])):
+                            svoi_win[0] = svoi_win[0] + 1
                         elif (int(past_gameScore[0]) > int(past_gameScore[1])) & (
-                                    int(gameScore[2]) < int(past_gameScore[2])):
-                            chuzWin[0] = chuzWin[0] + 1
+                                    int(game_score[2]) < int(past_gameScore[2])):
+                            chuz_win[0] = chuz_win[0] + 1
                         elif (int(past_gameScore[0]) < int(past_gameScore[1])) & (
-                                    int(gameScore[2]) < int(past_gameScore[2])):
-                            svoiWin[1] = svoiWin[1] + 1
+                                    int(game_score[2]) < int(past_gameScore[2])):
+                            svoi_win[1] = svoi_win[1] + 1
                         elif (int(past_gameScore[0]) < int(past_gameScore[1])) & (
-                                    int(gameScore[2]) > int(past_gameScore[2])):
-                            chuzWin[1] = chuzWin[1] + 1
-                        #if  (int(past_gameScore[0])!=int(gameScore[0])) & (int(past_gameScore[1])!=int(gameScore[1])) & ((past_gameScore[2]!=gameScore[2])):
+                                    int(game_score[2]) > int(past_gameScore[2])):
+                            chuz_win[1] = chuz_win[1] + 1
+                        #if  (int(past_gameScore[0])!=int(game_score[0])) & (int(past_gameScore[1])!=int(game_score[1])) & ((past_gameScore[2]!=game_score[2])):
                         if (int(past_gameScore[2]) == 1) & (
                                         ((int(past_gameScore[1]) == 40) & (int(past_gameScore[0]) < 40)) | int(
                                             past_gameScore[1]) == 41):
-                            breakPointCount[1] = breakPointCount[1] + 1
-                            print(past_gameScore, "\n", gameScore, "\n")
+                            break_point_count[1] = break_point_count[1] + 1
+                            print(past_gameScore, "\n", game_score, "\n")
                         if (int(past_gameScore[2]) == 2) & (
                                         ((int(past_gameScore[0]) == 40) & (int(past_gameScore[1]) < 40)) | int(
                                             past_gameScore[0]) == 41):
-                            breakPointCount[0] = breakPointCount[0] + 1
-                            print(past_gameScore, "\n", gameScore, "\n")
+                            break_point_count[0] = break_point_count[0] + 1
+                            print(past_gameScore, "\n", game_score, "\n")
                 i = i + 1
-            #print ("Player 1: ",gameWin[0]," (",svoiWin[0],"+",chuzWin[0],")\n", "Player 2: ",gameWin[1]," (",svoiWin[1],"+",chuzWin[1],")\n")
-            print("Player 1: ", breakPointCount[0], " Player 2: ", breakPointCount[1])
-            return [winPoint, setWin, svoiWin, chuzWin, breakPointCount]
+            #print ("Player 1: ",game_win[0]," (",svoi_win[0],"+",chuz_win[0],")\n", "Player 2: ",game_win[1]," (",svoi_win[1],"+",chuz_win[1],")\n")
+            print("Player 1: ", break_point_count[0], " Player 2: ", break_point_count[1])
+            return [win_point, set_win, svoi_win, chuz_win, break_point_count]
         else:
             print("Can't read last line")
             return 0
