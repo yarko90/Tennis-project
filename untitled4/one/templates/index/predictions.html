@@ -1,0 +1,35 @@
+<head>
+  <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/jquery1.9.1.min.js"></script>
+    <h1>Predictions</h1>
+</head>
+<body>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<div class="row">
+    <div class="col-lg-6">
+    <form action="/search/" method="get">
+      <input type="text" class="form-control" placeholder="Search for..." name="SearchByName">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>
+    </form>
+  </div><!-- /.col-lg-6 -->
+</div>
+{% if player %}
+    <ul>
+        <table class="table table-bordered">
+            <tr>
+                <td>Имя</td> <td>Количество игр</td> <td>Соотношение побед к поражениям</td> <td>СПП по своим подачам</td> <td>СПП по чужим подачам</td> <td>СПП по сетам</td>  <td>Количество брейкпоинтов</td>
+            </tr>
+            <tr>
+                {% for player in player %}
+                    <td>{{player.name}}</td> <td>{{player.total_games}}</td> <td>{{player.win_rate}}</td> <td>{{player.svoi_podachi}}</td> <td>{{player.chuz_podachi}}</td> <td>{{player.set_rate}}</td> <td>{{player.break_point}}</td>
+                {% endfor %}
+            </tr>
+        </table>
+    </ul>
+{% else %}
+    <p>Not worked</p>
+{% endif %}
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>

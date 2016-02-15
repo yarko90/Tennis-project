@@ -1,0 +1,15 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.side-rows {
+    padding-top: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.btn {
+    !important color: #000000;
+}

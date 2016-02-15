@@ -1,0 +1,72 @@
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    {% load staticfiles %}
+
+    <!-- Custom styles for this template -->
+    <link href="{% static "one/test/starter-temlate.css"%}" rel="stylesheet">
+    <title>Прогнозы</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" name="about" onclick="goAbout()">Проект большой теннис</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="../">Главная</a></li>
+            <li class="active"><a href="../predictions/">Прогнозы</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+</nav>
+<div id="content">
+<div id="strategy" class="starter-template">
+<div class="btn-group starter-template" data-toggle="buttons">
+  <label class="btn btn-primary">
+    <input type="radio" name="options" id="strategy1" autocomplete="off">Стратегия 1
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="options" id="strategy2" autocomplete="off">Стратегия 2
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="options" id="strategy3" autocomplete="off">Стратегия 3
+  </label>
+</div>
+</div>
+<div id='predict'>
+{% if games  %}
+        <ul>
+        <table class="table table-borded">
+           <tr>
+                    <td>Турнир</td> <td>Участники</td> <td>Время</td> <td>Коэффициенты</td>
+           </tr>
+           <tr>
+               {% for game in games %}
+               <td>{{ game.tournament }}</td> <td>{{ game.players }}</td> <td>{{ game.time }}</td> <td>{{ game.coeff }}</td>
+               {% endfor %}
+           </tr>
+        </table>
+        </ul>
+    {% else %}
+        <p>No more games for you</p>
+    {% endif %}
+</div>
+</div>
+<script src="{% static "one/js/predict.js" %}"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</body>

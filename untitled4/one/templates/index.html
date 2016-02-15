@@ -1,0 +1,25 @@
+<head>
+  <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/jquery1.9.1.min.js"></script>
+
+</head>
+<body>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+{% if players %}
+    <ul>
+        <table class="table table-bordered">
+            <tr>
+                <td>Имя</td> <td>Количество игр</td> <td>Соотношение побед к поражениям</td> <td>СПП по своим подачам</td> <td>СПП по чужим подачам</td> <td>СПП по сетам</td>  <td>Количество брейкпоинтов</td>
+            </tr>
+            {% for player in players %}
+            <tr>
+                <td>{{player.name}}</td> <td>{{player.total_games}}</td> <td>{{player.win_rate}}</td> <td>{{player.svoi_podachi}}</td> <td>{{player.chuz_podachi}}</td> <td>{{player.set_rate}}</td> <td>{{player.break_point}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
