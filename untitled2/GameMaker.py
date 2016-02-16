@@ -83,7 +83,7 @@ import shutil
 #    #shutil.move("path/to/current/"+f.name, "path/to/new/destination/for/"+f.name)
 
 
-def test_make_game_file():  #Создает тестовые записи в БД для работы сайта.
+def make_test_games():  #Создает тестовые записи в БД для работы сайта.
     i = 1
     number_of_games = 30
     games = []
@@ -142,7 +142,7 @@ try:
 except:
     print("database access denied")
 i = 1
-test_make_game_file()
+make_test_games()
 #while 1>0:
 #if ((datetime.now().hour==22) & (datetime.now().minute==00) & (datetime.now().second==00)) | (i==1):
 dirList = []
