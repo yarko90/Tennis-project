@@ -3,20 +3,18 @@ import uuid
 
 
 class Game:
-    GUID = ""
-    tournament = ""
-    time = ""
-    players = ""
-    coeff = ""
-    result = ""
 
     def __init__(self, GUID, tournament, time, players, coeff, result):
         if (GUID == "new"):
-            self.__GUID = str(uuid.uuid5(uuid.NAMESPACE_DNS, tournament))
+            self._GUID = str(uuid.uuid5(uuid.NAMESPACE_DNS, tournament))
         else:
-            self.__GUID = GUID
+            self._GUID = GUID
         self.tournament = tournament
         self.time = time
         self.players = players
         self.coeff = coeff
         self.result = result
+
+
+    def guid(self):
+        return self.__GUID
