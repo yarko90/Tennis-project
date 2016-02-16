@@ -1,7 +1,4 @@
 __author__ = 'например Андрей'
-import psycopg2
-import os
-import re
 import uuid
 
 
@@ -15,7 +12,7 @@ class Game:
 
     def __init__(self, GUID, tournament, time, players, coeff, result):
         if (GUID == "new"):
-            self.GUID = str(uuid.uuid5(uuid.NAMESPACE_DNS, tournament))
+            self.__GUID = str(uuid.uuid5(uuid.NAMESPACE_DNS, tournament))
         else:
             self.__GUID = GUID
         self.tournament = tournament

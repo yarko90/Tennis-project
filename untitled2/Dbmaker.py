@@ -100,10 +100,9 @@ def make_personal_file(playersLine, f):
         connection.commit()
         #print("Update 2")
         #cur.execute("""SELECT """"")
-        f.close()
     else:
         print("Game stat is not valid, game is not over may be\n", f.name)
-        f.close()
+    f.close()
         #shutil.move("path/to/current/"+f.name, "path/to/new/destination/for/"+f.name)
 
 
