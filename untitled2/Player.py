@@ -18,5 +18,5 @@ class Player:
         self.game_rate = gameRate
         self.break_point = breakePoint
 
-    def guid(self):
-        return self._GUID
+    #def guid(self):
+    #    return self.__GUID

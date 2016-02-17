@@ -3,6 +3,9 @@ import re
 
 
 def game_score(line):
+    '''
+    Приведение счета за розыгрыш мяча
+    '''
     if re.search(r"A", line):
         line = re.sub(r"A", "41", line)
     if re.search(r"\(\d+\:\d+\)", line):
@@ -23,24 +26,29 @@ def game_score(line):
 
 
 def renew_player_info(f):
-    # print (f.name)
+    '''
+    Составление статсистики по игрокам по файлу игры.
+
+     Определение победителя win_point
+     Определение счета по сетам и по геймам
+     Процент побед в геймах на своей подаче, на чужой подаче (Брейк) и Брейк-поинтов.
+    '''
     i = 0
-    #p1_mem_score = ["0:0"]     #lkz расширеной статистики.
+    #p1_mem_score = ["0:0"]     #для расширеной статистики.
     #p2_mem_score = ["0:0"]
     #p1_game_coef = 0
     #p2_game_coef = 0
     svoi_win = [0, 0]
     chuz_win = [0, 0]
-    score = 0
     win_point = 0
     set_win = [0, 0]
     game_win = [0, 0]
     break_point_count = [0, 0]
     lines = f.readlines()
-    file_len = len(lines)  # Это нужно для правильной работы. Повторный вызов len() выводит результат = 0.
+    file_len = len(lines)
     if file_len > 0:
         end_line = lines[-1]
-        #определение победителя win_point
+        #Определение победителя win_point
         if (end_line[-2] == "-") & (end_line[0] != "0:0"):
             if (int(end_line[0:3].split(":")[0]) == int(end_line[0:3].split(":")[1])) | (
                         (int(end_line[0:3].split(":")[0]) + int(end_line[0:3].split(":")[1])) < 2):
@@ -50,7 +58,7 @@ def renew_player_info(f):
             elif (int(end_line[0:3].split(":")[0]) < int(end_line[0:3].split(":")[1])):
                 win_point = 2
                 #print(end_line," ", win_point)
-            #определение счета по сетам P1setWin, P2setWin и по геймам P1GameWin P2GameWin
+        #Определение счета по сетам и по геймам
         if win_point != 0:
             sets = end_line[5:-6].split(", ")
             if len(sets) > 1:
@@ -62,7 +70,7 @@ def renew_player_info(f):
                     game_win[0] = game_win[0] + int(set.split(":")[0])
                     game_win[1] = game_win[1] + int(set.split(":")[1])
                     #print(end_line," ", win_point, " ",set_win[0],"/",set_win[1]," ",game_win[0],"/",game_win[1])
-                #Процент побед в геймах на своей подаче, на чужой подаче (Брейк) и Брейк-поинтов.
+        #Процент побед в геймах на своей подаче, на чужой подаче (Брейк) и Брейк-поинтов.
             for line in lines:
                 if i > 1:
                     #print("i=",i," line: ",lines[i-1])

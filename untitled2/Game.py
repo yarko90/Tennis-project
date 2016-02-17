@@ -16,5 +16,5 @@ class Game:
         self.result = result
 
 
-    def guid(self):
-        return self.__GUID
+    #def guid(self):
+    #    return self.__GUID

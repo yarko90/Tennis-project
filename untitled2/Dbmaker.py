@@ -28,7 +28,7 @@ def player_name_improvement(raw_player):
     return player_name
 
 
-def player_to_database(playersLine, f):
+def player_to_database(players_line, f):
     '''
     Добавление/обноление игрока в БД
 
@@ -37,7 +37,7 @@ def player_to_database(playersLine, f):
     Добавляет нового или обновляет существующего игрока в БД.
     (Тест) Передает имена игроков и результат игры в  GameMaker.----
     '''
-    players = playersLine[0:-2].split(" ")
+    players = players_line[0:-2].split(" ")
     player_list = []
     game_stat = StatPlayer.renew_player_info(f)
     if game_stat != 0:
@@ -97,7 +97,6 @@ def player_to_database(playersLine, f):
         #Обновление Брейк Поинтов
         p1_bp = str(int(player_list[0].break_point) + game_stat[4][0])
         p2_bp = str(int(player_list[1].break_point) + game_stat[4][1])
-
 
         p1 = Player.Player(player_list[0]._GUID, player_list[0].name, player_list[0].total_games, p1_wr, p1_sv, p1_ch, p1_sr,
                            "0/0", p1_bp)

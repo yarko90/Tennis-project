@@ -4,7 +4,6 @@
     <list default="true" id="0ceebc9e-c2c4-46f4-bce7-a2acfd662310" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dbmaker.py" afterPath="$PROJECT_DIR$/Dbmaker.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game.py" afterPath="$PROJECT_DIR$/Game.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameMaker.py" afterPath="$PROJECT_DIR$/GameMaker.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Player.py" afterPath="$PROJECT_DIR$/Player.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StatPlayer.py" afterPath="$PROJECT_DIR$/StatPlayer.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -40,11 +39,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Dbmaker.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Dbmaker.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.177264" vertical-offset="2796" max-vertical-offset="3315">
+              <caret line="110" column="13" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="13" />
+              <folding>
+                <element signature="e#315#714#0" expanded="false" />
+                <marker date="1455701510976" expanded="true" signature="1446:1594" placeholder="SELECT &quot;name..one_player..." />
+                <marker date="1455701510976" expanded="true" signature="2442:2614" placeholder="INSERT INTO ..." />
+                <marker date="1455701510976" expanded="true" signature="5355:5509" placeholder="UPDATE one_p..." />
+                <marker date="1455701510976" expanded="true" signature="5731:5885" placeholder="UPDATE one_p..." />
+                <marker date="1455701510976" expanded="true" signature="7013:7120" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="StatPlayer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StatPlayer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1215" max-vertical-offset="1768">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1904">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -53,8 +69,8 @@
       <file leaf-file-name="Game.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="425">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -63,26 +79,9 @@
       <file leaf-file-name="Player.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Player.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="459">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dbmaker.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Dbmaker.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.030303" vertical-offset="2123" max-vertical-offset="3332">
-              <caret line="196" column="49" selection-start-line="196" selection-start-column="49" selection-end-line="196" selection-end-column="49" />
-              <folding>
-                <element signature="e#315#714#0" expanded="false" />
-                <marker date="1455657087165" expanded="true" signature="1444:1592" placeholder="SELECT &quot;name..one_player..." />
-                <marker date="1455657087165" expanded="true" signature="2440:2612" placeholder="INSERT INTO ..." />
-                <marker date="1455657087165" expanded="true" signature="5354:5508" placeholder="UPDATE one_p..." />
-                <marker date="1455657087165" expanded="true" signature="5730:5884" placeholder="UPDATE one_p..." />
-                <marker date="1455657087165" expanded="true" signature="7012:7119" placeholder="INSERT INTO ..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -124,9 +123,9 @@
         <option value="$PROJECT_DIR$/DB(устарело).py" />
         <option value="$PROJECT_DIR$/RenewPlayerInfo.py" />
         <option value="$PROJECT_DIR$/GameMaker.py" />
-        <option value="$PROJECT_DIR$/StatPlayer.py" />
         <option value="$PROJECT_DIR$/Game.py" />
         <option value="$PROJECT_DIR$/Player.py" />
+        <option value="$PROJECT_DIR$/StatPlayer.py" />
         <option value="$PROJECT_DIR$/Dbmaker.py" />
       </list>
     </option>
@@ -135,7 +134,6 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="840" />
     <option name="width" value="840" />
     <option name="height" value="1010" />
   </component>
@@ -190,16 +188,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -233,7 +221,7 @@
       <recent name="C:\Users\например Андрей\PycharmProjects\untitled4\one" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Dbmaker">
+  <component name="RunManager" selected="Django server.untitled4">
     <configuration default="false" name="DB" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -582,11 +570,17 @@
       <option name="project" value="LOCAL" />
       <updated>1455630292705</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Not tested">
+      <created>1455657286038</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1455657286038</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="840" y="0" width="840" height="1010" extended-state="0" />
+    <frame x="0" y="0" width="840" height="1010" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -595,9 +589,9 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3572241" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3629124" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19560878" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11794872" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36410257" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1010,41 +1004,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Player.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/StatPlayer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1215" max-vertical-offset="1768">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1904">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Dbmaker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.030303" vertical-offset="2123" max-vertical-offset="3332">
-          <caret line="196" column="49" selection-start-line="196" selection-start-column="49" selection-end-line="196" selection-end-column="49" />
+        <state vertical-scroll-proportion="-2.177264" vertical-offset="2796" max-vertical-offset="3315">
+          <caret line="110" column="13" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="13" />
           <folding>
             <element signature="e#315#714#0" expanded="false" />
-            <marker date="1455657087165" expanded="true" signature="1444:1592" placeholder="SELECT &quot;name..one_player..." />
-            <marker date="1455657087165" expanded="true" signature="2440:2612" placeholder="INSERT INTO ..." />
-            <marker date="1455657087165" expanded="true" signature="5354:5508" placeholder="UPDATE one_p..." />
-            <marker date="1455657087165" expanded="true" signature="5730:5884" placeholder="UPDATE one_p..." />
-            <marker date="1455657087165" expanded="true" signature="7012:7119" placeholder="INSERT INTO ..." />
+            <marker date="1455701510976" expanded="true" signature="1446:1594" placeholder="SELECT &quot;name..one_player..." />
+            <marker date="1455701510976" expanded="true" signature="2442:2614" placeholder="INSERT INTO ..." />
+            <marker date="1455701510976" expanded="true" signature="5355:5509" placeholder="UPDATE one_p..." />
+            <marker date="1455701510976" expanded="true" signature="5731:5885" placeholder="UPDATE one_p..." />
+            <marker date="1455701510976" expanded="true" signature="7013:7120" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
