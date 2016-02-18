@@ -43,12 +43,12 @@
     <tr>
         <td>
             <div class="side-rows">
-                <p><img src="{% static "one/image/tennisgirl.jpg" %}" alt="Image doesn't work" width="200"></p>
+                <p><img src="{% static "one/image/poststamp.jpg" %}" alt="Image doesn't work" width="200"></p>
             </div>
         </td>
         <td>
-            <p class="lead">Эта таблица про игроков.</p>
-            <form action="predictSearch/" method="GET">
+            <p class="lead">Это таблица игроков.</p>
+            <form action="predict_search/" method="GET">
                     <input type="text" class="form-control" placeholder="Найти игрока" name="SearchByName">
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="submit">Поиск</button>
@@ -64,7 +64,7 @@
                     </tr>
                     {% for player in player_list %}
                     <tr>
-                        <td><a href="http://95.213.200.70:8000/one/predictSearch/?SearchByName={{player.name}}">{{player.name}}</a></td> <td>{{player.total_games}}</td> <td>{{player.win_rate}}</td>
+                        <td><a href="http://127.0.0.1:8000/one/predict_search/?SearchByName={{player.name}}">{{player.name}}</a></td> <td>{{player.total_games}}</td> <td>{{player.win_rate}}</td>
                     </tr>
                     {% endfor %}
                 </table>
@@ -75,12 +75,12 @@
         </td>
         <td>
             <div class="side-rows">
-                <p><img src="{% static "one/image/tennisgirl.jpg" %}" alt="Image doesn't work" width="200"></p>
+                <p><img src="{% static "one/image/Tenniscourt.png" %}" alt="Image doesn't work" width="200"></p>
             </div>
         </td>
     </tr>
 </table>
 </div>
-<script src="{% static "one/js/predict.js" %}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="{% static "one/js/predict.js" %}"></script>
 </body>

@@ -16,13 +16,13 @@ function goAboutFromPredictions(){
 }
 
 $('#strategy1').on('click',function(){
-$("#variants").load("../variants/ #strategy1")
+    $("#gameTable").load("../variants/ #strategy1")
 })
 $('#strategy2').on('click',function(){
-$("#variants").load("../variants/ #strategy2")
+    $("#gameTable").load("../variants/ #strategy2")
 })
 $('#strategy3').on('click',function(){
-$("#variants").load("../variants/ #strategy3")
+    $("#gameTable").load("../variants/ #strategy3")
 })
 
 
@@ -34,4 +34,5 @@ document.getElementById("strategy2").onclick=function(){
 }
 document.getElementById("strategy3").onclick=function(){
     alert("Стратегия3")
-}*/
+}
+*/

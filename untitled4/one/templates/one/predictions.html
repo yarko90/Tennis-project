@@ -14,6 +14,7 @@
     <title>Прогнозы</title>
 </head>
 <body>
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -37,35 +38,42 @@
 <div id="strategy" class="starter-template">
 <div class="btn-group starter-template" data-toggle="buttons">
   <label class="btn btn-primary">
-    <input type="radio" name="options" id="strategy1" autocomplete="off">Стратегия 1
+    <input type="radio" name="options" id="strategy1" autocomplete="off">Все игры
   </label>
   <label class="btn btn-primary">
-    <input type="radio" name="options" id="strategy2" autocomplete="off">Стратегия 2
+    <input type="radio" name="options" id="strategy2" autocomplete="off">Ставки на победителя
   </label>
   <label class="btn btn-primary">
     <input type="radio" name="options" id="strategy3" autocomplete="off">Стратегия 3
   </label>
 </div>
 </div>
+<div id="gameTable">
 <div id='predict'>
-{% if games  %}
+{% if game_list  %}
         <ul>
         <table class="table table-borded">
            <tr>
-                    <td>Турнир</td> <td>Участники</td> <td>Время</td> <td>Коэффициенты</td>
+               <td>Турнир</td> <td>Участники</td> <td>Время</td> <td>Коэффициенты</td>
            </tr>
-           <tr>
-               {% for game in games %}
+
+               {% for game in game_list %}
+               <tr>
+               <div id="gameTable">
                <td>{{ game.tournament }}</td> <td>{{ game.players }}</td> <td>{{ game.time }}</td> <td>{{ game.coeff }}</td>
+               </div>
+               </tr>
                {% endfor %}
-           </tr>
+
         </table>
         </ul>
-    {% else %}
+{% else %}
         <p>No more games for you</p>
-    {% endif %}
+{% endif %}
+</div>
+
 </div>
 </div>
-<script src="{% static "one/js/predict.js" %}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="{% static "one/js/predict.js" %}"></script>
 </body>

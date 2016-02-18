@@ -5,10 +5,10 @@ from . import views
 
 urlpatterns = [
     #url(r'^$', views.index, name='index'),
-    url(r'^$', views.IndexView.as_view(), name='index'),
+    url(r'^$', views.index_view.as_view(), name='index'),
     url(r'^about/$', views.about, name='about'),
     url(r'^predictions/about/$', views.about, name='about'),
-    url(r'^predictSearch/$', views.predictSearch, name='predictS'),
+    url(r'^predict_search/$', views.predict_search, name='predictS'),
     url(r'^test/$', views.test, name='test'),
     url(r'^predictions/$', views.predict, name='predict'),
     url(r'^strategy/$', views.strategy, name='strategy'),

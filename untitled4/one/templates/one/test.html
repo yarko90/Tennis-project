@@ -45,7 +45,17 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
+<div class="btn-group starter-template" data-toggle="buttons">
+  <label class="btn btn-primary">
+    <input type="radio" name="options" id="strategy1" autocomplete="off">Все игры
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="options" id="strategy2" autocomplete="off">Ставки на победителя
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="options" id="strategy3" autocomplete="off">Стратегия 3
+  </label>
+</div>
     <div class="container">
 
       <div class="starter-template">
@@ -54,6 +64,7 @@
       </div>
 
     </div>
+ <script src="{% static "one/js/predict.js" %}"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
