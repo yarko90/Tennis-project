@@ -1,0 +1,23 @@
+-- Table: one_player
+
+-- DROP TABLE one_player;
+
+CREATE TABLE one_player
+(
+  id serial NOT NULL,
+  name character varying(100) NOT NULL,
+  "GUID" character varying(36) NOT NULL,
+  total_games character varying(3) NOT NULL,
+  win_rate character varying(7) NOT NULL,
+  svoi_podachi character varying(9) NOT NULL,
+  chuz_podachi character varying(9) NOT NULL,
+  set_rate character varying(7) NOT NULL,
+  game_rate character varying(7) NOT NULL,
+  break_point character varying(9) NOT NULL,
+  CONSTRAINT one_player_pkey PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE one_player
+  OWNER TO postgres;

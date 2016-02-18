@@ -1,0 +1,35 @@
+<head>
+  <link href="C:/Users/например Андрей/PycharmProjects/untitled4/one/templates/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="C:/Users/например Андрей/PycharmProjects/untitled4/one/templates/js/jquery1.9.1.min.js"></script>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<form action="predictSearch/" method="GET">
+      <input type="text" class="form-control" placeholder="Search for..." name="SearchByName">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="submit">Go!</button>
+      </span>
+</form>
+{% if object_list %}
+    <ul>
+        <table class="table table-bordered">
+            <tr>
+                <td>Имя</td> <td>Количество игр</td> <td>Соотношение побед к поражениям</td> <td>СПП по своим подачам</td> <td>СПП по чужим подачам</td> <td>СПП по сетам</td>  <td>Количество брейкпоинтов</td>
+            </tr>
+            {% for player in player_list %}
+            <tr>
+                <td>{{player.name}}</td> <td>{{player.total_games}}</td> <td>{{player.win_rate}}</td> <td>{{player.svoi_podachi}}</td> <td>{{player.chuz_podachi}}</td> <td>{{player.set_rate}}</td> <td>{{player.break_point}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </ul>
+{% else %}
+    <p>No players are available.</p>
+{% endif %}
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
