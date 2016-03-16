@@ -63,7 +63,7 @@
                     </tr>
                     {% for player in player_list %}
                     <tr>
-                        <td><a href="http://127.0.0.1:8000/one/predict_search/?SearchByName={{player.name}}">{{player.name}}</a></td> <td>{{player.total_games}}</td> <td>{{player.win_rate}}</td>
+                        <td><a href="predict_search/?SearchByName={{player.name}}">{{player.name}}</a></td> <td>{{player.total_games}}</td> <td>{{player.win_rate}}</td>
                     </tr>
                     {% endfor %}
                 </table>

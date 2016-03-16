@@ -37,7 +37,7 @@ class predict_view(generic.ListView):
     context_object_name = 'game_list'
 
     def get_queryset(self):
-        return Game.objects.order_by('-time')
+        return Game.objects.order_by('-coeff')
 
 
 #def predict(request):
@@ -54,11 +54,10 @@ def predict_search(request):
     if 'SearchByName' in request.GET:
         name = request.GET['SearchByName']
         message = "Имя:   %r" % name
+        name = name.split(" ")
+        print(name)
         player = Player.objects.filter(name=name)
-        print("Success")
     else:
-        message = "Провал"
-        print("Fail")
         player = 'Not found'
     #return HttpResponse(message)
     context = RequestContext(request, {'player': player, })

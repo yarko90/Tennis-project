@@ -24,7 +24,7 @@ class Game(models.Model):
     tournament = models.CharField(max_length=100)
     time = models.DateTimeField(max_length=30)
     players = models.CharField(max_length=200)
-    coeff = models.CharField(max_length=13)
+    coeff = models.CharField(max_length=20)
     result = models.CharField(max_length=30)
 
     def finder(tournament):

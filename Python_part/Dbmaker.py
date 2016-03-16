@@ -10,6 +10,7 @@ import StatPlayer
 from datetime import datetime, date, time
 import random
 import shutil
+from Game_parser import Game_parser
 # Обработка информации из файла, обновление статистики по игрокам в БД
 
 
@@ -117,34 +118,48 @@ def player_to_database(players_line, f):
         #shutil.move("path/to/current/"+f.name, "path/to/new/destination/for/"+f.name)
 
 
-def make_test_games():
-    '''Создает тестовые записи в БД для работы сайта.'''
-    i = 1
-    number_of_games = 30
-    games = []
-    while i < number_of_games:
-        GUID = 'new'
-        tournament = 'test'
-        time = str(datetime.now().date())
-        players = 'player 1, player 2'
-        coeff = [round(random.uniform(1, 3), 3), round(random.uniform(1, 3), 3)]
-        if coeff[0] > coeff[1]:
-            result = 1
-        else:
-            result = 2
-        try:
-            game = Game.Game(GUID, tournament, time, players, str(coeff), result)
-            games.append(game)
-        except:
-            print("game error")
-        print(coeff)
-        i += 1
-        connection.commit()
+#def make_test_games():
+#    '''Создает тестовые записи в БД для работы сайта.'''
+#    i = 1
+#    number_of_games = 30
+#    games = []
+#    while i < number_of_games:
+#        GUID = 'new'
+#        tournament = 'test'
+#        time = str(datetime.now().date())
+#        players = 'player 1, player 2'
+#        coeff = [round(random.uniform(1, 3), 3), round(random.uniform(1, 3), 3)]
+#        if coeff[0] > coeff[1]:
+#            result = 1
+#        else:
+#            result = 2
+#        try:
+#            game = Game.Game(GUID, tournament, time, players, str(coeff), result)
+#            games.append(game)
+#        except:
+#            print("game error")
+#        print(coeff)
+#        i += 1
+#        connection.commit()
+#    for game in games:
+#        print(game)
+#        cur.execute(
+#            """INSERT INTO one_game ("GUID","tournament", "time", "players", "coeff", "result") VALUES (%s,%s,%s,%s,%s,%s)""",
+#            (game._GUID, game.tournament, game.time, game.players, game.coeff[1:-1], game.result))
+#        connection.commit()
+
+
+def make_games():
+    '''
+    Список актуальных игр
+    '''
+    cur.execute("""TRUNCATE one_game;""")
+    #games = Game_parser()
+    games = Game_parser().get_soup()
     for game in games:
-        print(game)
         cur.execute(
             """INSERT INTO one_game ("GUID","tournament", "time", "players", "coeff", "result") VALUES (%s,%s,%s,%s,%s,%s)""",
-            (game._GUID, game.tournament, game.time, game.players, game.coeff[1:-1], game.result))
+            (game._GUID, game.tournament, game.time, game.players, game.coeff, game.result))
         connection.commit()
 
 # Извлечение нужных файлов с играми, их открытие на чтение, считывание имен игроков(первой строки файла) и передача на детальный анализ игры в player_to_database
@@ -178,7 +193,9 @@ try:
 except:
     print("database access denied")
 i = 1
-while i > 0:
+
+
+while i is not None:
     if ((datetime.now().hour == 22) & (datetime.now().minute == 00) & (datetime.now().second == 00)) | (i == 1):
         dirList = []
         print("0")
@@ -191,12 +208,12 @@ while i > 0:
             if (name_check.match(top) is not None):
                 #print(top)
                 dirList.append(top)
-        make_score_file(dirList)
-        make_test_games()
+        #make_score_file(dirList)
+        make_games()
         destion = "E:\\tennis analitics\\archive"
         #destion = "/home/name1/tennis analitics/archive"
         #destion="/home/programm/archive"
-        for dir in dirList:
-            print(dir)
-            shutil.move(dir, destion)
-        i = 0
+        #for dir in dirList:
+        #    print(dir)
+        #    shutil.move(dir, destion)
+        i = None
