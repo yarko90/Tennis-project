@@ -7,14 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0ceebc9e-c2c4-46f4-bce7-a2acfd662310" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dbmaker.py" afterPath="$PROJECT_DIR$/Dbmaker.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Django_part/one/admin.py" afterPath="$PROJECT_DIR$/../Django_part/one/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Django_part/one/templates/one/index.html" afterPath="$PROJECT_DIR$/../Django_part/one/templates/one/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Django_part/one/models.py" afterPath="$PROJECT_DIR$/../Django_part/one/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Django_part/Django_part/settings.py" afterPath="$PROJECT_DIR$/../Django_part/Django_part/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Django_part/one/templates/one/strategy.html" afterPath="$PROJECT_DIR$/../Django_part/one/templates/one/strategy.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Django_part/one/views.py" afterPath="$PROJECT_DIR$/../Django_part/one/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Django_part/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Django_part/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="untitled2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,18 +53,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Dbmaker.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Dbmaker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Dbmaker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2392" max-vertical-offset="3808">
-              <caret line="155" column="41" selection-start-line="155" selection-start-column="41" selection-end-line="155" selection-end-column="41" />
+            <state vertical-scroll-proportion="3.9761336" vertical-offset="0" max-vertical-offset="3791">
+              <caret line="196" column="0" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
               <folding>
-                <marker date="1457523245496" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
-                <marker date="1457523245496" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
-                <marker date="1457523245496" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
-                <marker date="1457523245496" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
-                <marker date="1457523245496" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
-                <marker date="1457523245496" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
+                <marker date="1458744448658" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
+                <marker date="1458744448658" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
+                <marker date="1458744448658" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
+                <marker date="1458744448658" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
+                <marker date="1458744448658" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
+                <marker date="1458744448658" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
@@ -87,10 +80,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game_parser.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Game_parser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game_parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16504854" vertical-offset="357" max-vertical-offset="1037">
+            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1037">
               <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
               <folding>
                 <element signature="e#46#64#0" expanded="true" />
@@ -164,8 +157,8 @@
         <option value="$USER_HOME$/PycharmProjects/untitled4/one/urls.py" />
         <option value="$USER_HOME$/PycharmProjects/untitled4/one/views.py" />
         <option value="$USER_HOME$/PycharmProjects/untitled4/one/models.py" />
-        <option value="$PROJECT_DIR$/Dbmaker.py" />
         <option value="$PROJECT_DIR$/Game_parser.py" />
+        <option value="$PROJECT_DIR$/Dbmaker.py" />
       </list>
     </option>
   </component>
@@ -173,6 +166,7 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="840" />
     <option name="width" value="840" />
     <option name="height" value="1010" />
   </component>
@@ -218,7 +212,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -229,6 +222,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -660,31 +654,31 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="840" height="1010" extended-state="0" />
-    <editor active="false" />
+    <frame x="840" y="0" width="840" height="1010" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41923076" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.07457212" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36746302" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1974359" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.07457212" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3628205" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39869282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="100" y="100" width="855" height="810" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21843003" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36746302" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287827" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39869282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -742,7 +736,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="20" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -760,12 +754,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3519">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1457523245496" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
-            <marker date="1457523245496" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
-            <marker date="1457523245496" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
-            <marker date="1457523245496" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
-            <marker date="1457523245496" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
-            <marker date="1457523245496" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
+            <marker date="1458744448658" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
+            <marker date="1458744448658" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
+            <marker date="1458744448658" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -790,12 +784,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="3519">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <marker date="1457523245496" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
-            <marker date="1457523245496" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
-            <marker date="1457523245496" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
-            <marker date="1457523245496" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
-            <marker date="1457523245496" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
-            <marker date="1457523245496" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
+            <marker date="1458744448658" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
+            <marker date="1458744448658" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
+            <marker date="1458744448658" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -819,12 +813,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="3519">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <marker date="1457523245496" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
-            <marker date="1457523245496" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
-            <marker date="1457523245496" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
-            <marker date="1457523245496" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
-            <marker date="1457523245496" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
-            <marker date="1457523245496" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
+            <marker date="1458744448658" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
+            <marker date="1458744448658" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
+            <marker date="1458744448658" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -848,12 +842,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="3519">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <marker date="1457523245496" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
-            <marker date="1457523245496" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
-            <marker date="1457523245496" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
-            <marker date="1457523245496" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
-            <marker date="1457523245496" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
-            <marker date="1457523245496" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
+            <marker date="1458744448658" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
+            <marker date="1458744448658" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
+            <marker date="1458744448658" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -877,12 +871,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="3519">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <marker date="1457523245496" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
-            <marker date="1457523245496" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
-            <marker date="1457523245496" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
-            <marker date="1457523245496" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
-            <marker date="1457523245496" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
-            <marker date="1457523245496" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
+            <marker date="1458744448658" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
+            <marker date="1458744448658" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
+            <marker date="1458744448658" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -906,12 +900,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="3519">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <marker date="1457523245496" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
-            <marker date="1457523245496" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
-            <marker date="1457523245496" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
-            <marker date="1457523245496" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
-            <marker date="1457523245496" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
-            <marker date="1457523245496" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
+            <marker date="1458744448658" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
+            <marker date="1458744448658" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
+            <marker date="1458744448658" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -935,12 +929,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3519">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1457523245496" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
-            <marker date="1457523245496" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
-            <marker date="1457523245496" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
-            <marker date="1457523245496" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
-            <marker date="1457523245496" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
-            <marker date="1457523245496" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
+            <marker date="1458744448658" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
+            <marker date="1458744448658" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
+            <marker date="1458744448658" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -964,12 +958,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3519">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1457523245496" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
-            <marker date="1457523245496" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
-            <marker date="1457523245496" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
-            <marker date="1457523245496" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
-            <marker date="1457523245496" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
-            <marker date="1457523245496" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
+            <marker date="1458744448658" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
+            <marker date="1458744448658" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
+            <marker date="1458744448658" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -1145,14 +1139,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Player.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="519">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Game.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
@@ -1169,27 +1155,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dbmaker.py">
+    <entry file="file://$PROJECT_DIR$/Game_parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2392" max-vertical-offset="3808">
-          <caret line="155" column="41" selection-start-line="155" selection-start-column="41" selection-end-line="155" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1037">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
           <folding>
-            <marker date="1457523245496" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
-            <marker date="1457523245496" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
-            <marker date="1457523245496" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
-            <marker date="1457523245496" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
-            <marker date="1457523245496" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
-            <marker date="1457523245496" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
+            <element signature="e#46#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game_parser.py">
+    <entry file="file://$PROJECT_DIR$/Player.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16504854" vertical-offset="357" max-vertical-offset="1037">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="519">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dbmaker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.9761336" vertical-offset="0" max-vertical-offset="3791">
+          <caret line="196" column="0" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
           <folding>
-            <element signature="e#46#64#0" expanded="true" />
+            <marker date="1458744448658" expanded="true" signature="1482:1630" placeholder="SELECT &quot;name..one_player..." />
+            <marker date="1458744448658" expanded="true" signature="2478:2650" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="5391:5545" placeholder="UPDATE one_p..." />
+            <marker date="1458744448658" expanded="true" signature="5767:5921" placeholder="UPDATE one_p..." />
+            <marker date="1458744448658" expanded="true" signature="7076:7183" placeholder="INSERT INTO ..." />
+            <marker date="1458744448658" expanded="true" signature="7544:7651" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
