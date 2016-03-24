@@ -186,8 +186,8 @@ def make_score_file(DirList):
 
 #Соединение с БД
 try:
-    connection = psycopg2.connect("dbname='test' user='postgres' host='localhost' password='123'  port='5432'")
-    print("\nShow me the database:\n")
+    connection = psycopg2.connect("dbname='test' user='postgres' host='localhost' password='123'  port='5432'")# Для Windows
+    #connection = psycopg2.connect("dbname='postgres' user='postgres' host='localhost' password='123'  port='5432'")# Для Unbuntu (server)
     connection.commit()
     cur = connection.cursor()
 except:
@@ -200,20 +200,19 @@ while i is not None:
         dirList = []
         print("0")
         #Поиск папок с играми и передача на обработку в make_score_file
-        #print("/home/name1/tennis\ analitics")
-        #for top, dirs, files in os.walk("/home/name1/tennis analitics"):
-        #for top, dirs, files in os.walk("/home/programm"):
-        for top, dirs, files in os.walk("E:\\tennis analitics"):
+        #for top, dirs, files in os.walk("/home/name1/tennis analitics"):# Для Ubuntu
+        #for top, dirs, files in os.walk("/home/programm"):# Для Unbuntu server
+        for top, dirs, files in os.walk("E:\\tennis analitics"):# Для Windows
             name_check = re.compile(r".+MSK_2015")
             if (name_check.match(top) is not None):
                 #print(top)
                 dirList.append(top)
         #make_score_file(dirList)
         make_games()
-        destion = "E:\\tennis analitics\\archive"
-        #destion = "/home/name1/tennis analitics/archive"
-        #destion="/home/programm/archive"
-        #for dir in dirList:
-        #    print(dir)
-        #    shutil.move(dir, destion)
+        destion = "E:\\tennis analitics\\archive"# Для Windows
+        #destion = "/home/name1/tennis analitics/archive"# Для Ubuntu
+        #destion="/home/programm/archive"# Для Unbuntu server
+        for dir in dirList:
+            print(dir)
+            shutil.move(dir, destion)
         i = None
