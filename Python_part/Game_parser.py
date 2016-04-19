@@ -26,7 +26,7 @@ class Game_parser():
             i += 1
             print(i, player1, "\n", player2)
             tournament = player1[2]
-            players = player1[0]+' против '+player2[0]
+            players = '{} против {}'.format(player1[0], player2[0])
             time = str(player1[3])
             GUID = 'new'
             coeff = str(player1[1]+'/'+player2[1])

@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd17b435-42f6-4132-b4a1-48e1763383aa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Python_part/Stat_main.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Python_part/Dbmaker.py" afterPath="$PROJECT_DIR$/../Python_part/Dbmaker.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Python_part/Game.py" afterPath="$PROJECT_DIR$/../Python_part/Game.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Python_part/Player.py" afterPath="$PROJECT_DIR$/../Python_part/Player.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Python_part/.idea/Python_part.iml" afterPath="$PROJECT_DIR$/../Python_part/.idea/Python_part.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Python_part/.idea/modules.xml" afterPath="$PROJECT_DIR$/../Python_part/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/one/views.py" afterPath="$PROJECT_DIR$/one/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Python_part/Game_parser.py" afterPath="$PROJECT_DIR$/../Python_part/Game_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Python_part/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Python_part/.idea/workspace.xml" />
     </list>
@@ -635,7 +627,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="840" y="0" width="840" height="1010" extended-state="1" />
+    <frame x="840" y="0" width="840" height="1010" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
