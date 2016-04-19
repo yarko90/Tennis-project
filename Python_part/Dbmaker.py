@@ -11,9 +11,9 @@ from datetime import datetime, date, time
 import random
 import shutil
 from Game_parser import Game_parser
+
+
 # Обработка информации из файла, обновление статистики по игрокам в БД
-
-
 def player_name_improvement(raw_player):
     '''
     Обработка имени игрока.
@@ -58,7 +58,7 @@ def player_to_database(players_line, f):
             except:
                 connection.commit()
                 player = Player.Player("new", player_name, "1", "0/0", "0/0", "0/0", "0/0", "0/0", "0")
-                guid = player.guid()
+                guid = player.guid
                 #print (guid)
                 cur.execute(
                     """INSERT INTO one_player ("name","GUID","total_games", "win_rate", "svoi_podachi", "chuz_podachi", "set_rate", "game_rate", "break_point") VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)""",
@@ -99,9 +99,9 @@ def player_to_database(players_line, f):
         p1_bp = str(int(player_list[0].break_point) + game_stat[4][0])
         p2_bp = str(int(player_list[1].break_point) + game_stat[4][1])
 
-        p1 = Player.Player(player_list[0]._GUID, player_list[0].name, player_list[0].total_games, p1_wr, p1_sv, p1_ch, p1_sr,
+        p1 = Player.Player(player_list[0].guid, player_list[0].name, player_list[0].total_games, p1_wr, p1_sv, p1_ch, p1_sr,
                            "0/0", p1_bp)
-        p2 = Player.Player(player_list[1]._GUID, player_list[1].name, player_list[1].total_games, p2_wr, p2_sv, p2_ch, p2_sr,
+        p2 = Player.Player(player_list[1].guid, player_list[1].name, player_list[1].total_games, p2_wr, p2_sv, p2_ch, p2_sr,
                            "0/0", p2_bp)
         cur.execute(
             """UPDATE one_player SET "total_games"=%s, "win_rate"=%s, "svoi_podachi"=%s, "chuz_podachi"=%s, "set_rate"=%s, "game_rate"=%s, "break_point"=%s WHERE "name"=%s""",
@@ -162,6 +162,7 @@ def make_games():
             (game._GUID, game.tournament, game.time, game.players, game.coeff, game.result))
         connection.commit()
 
+
 # Извлечение нужных файлов с играми, их открытие на чтение, считывание имен игроков(первой строки файла) и передача на детальный анализ игры в player_to_database
 def make_score_file(DirList):
     '''
@@ -184,35 +185,32 @@ def make_score_file(DirList):
         print("________________________________________________________________________________________")
 
 
+def start_stat_collecting():
+    dirList = []
+    print("123123123")
+    #Поиск папок с играми и передача на обработку в make_score_file
+    #for top, dirs, files in os.walk("/home/name1/tennis analitics"):# Для Ubuntu
+    #for top, dirs, files in os.walk("/home/programm"):# Для Unbuntu server
+    for top, dirs, files in os.walk("E:\\tennis analitics"):# Для Windows
+        name_check = re.compile(r".+MSK_2015")
+        if (name_check.match(top) is not None):
+            #print(top)
+            dirList.append(top)
+    make_score_file(dirList)
+    make_games()
+    destion = "E:\\tennis analitics\\archive"# Для Windows
+    #destion = "/home/name1/tennis analitics/archive"# Для Ubuntu
+    #destion="/home/programm/archive"# Для Unbuntu server
+    #for dir in dirList:
+    #    print(dir)
+    #    shutil.move(dir, destion)
+    return None
 #Соединение с БД
 try:
     connection = psycopg2.connect("dbname='test' user='postgres' host='localhost' password='123'  port='5432'")# Для Windows
     #connection = psycopg2.connect("dbname='postgres' user='postgres' host='localhost' password='123'  port='5432'")# Для Unbuntu (server)
     connection.commit()
     cur = connection.cursor()
+    print("db_success")
 except:
     print("database access denied")
-i = 1
-
-
-while i is not None:
-    if ((datetime.now().hour == 22) & (datetime.now().minute == 00) & (datetime.now().second == 00)) | (i == 1):
-        dirList = []
-        print("0")
-        #Поиск папок с играми и передача на обработку в make_score_file
-        #for top, dirs, files in os.walk("/home/name1/tennis analitics"):# Для Ubuntu
-        #for top, dirs, files in os.walk("/home/programm"):# Для Unbuntu server
-        for top, dirs, files in os.walk("E:\\tennis analitics"):# Для Windows
-            name_check = re.compile(r".+MSK_2015")
-            if (name_check.match(top) is not None):
-                #print(top)
-                dirList.append(top)
-        #make_score_file(dirList)
-        make_games()
-        destion = "E:\\tennis analitics\\archive"# Для Windows
-        #destion = "/home/name1/tennis analitics/archive"# Для Ubuntu
-        #destion="/home/programm/archive"# Для Unbuntu server
-        for dir in dirList:
-            print(dir)
-            shutil.move(dir, destion)
-        i = None

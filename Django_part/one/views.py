@@ -6,7 +6,6 @@ from django.core.urlresolvers import reverse
 from django.views import generic
 from .models import Player, Game
 
-
 def test(request):
     context = RequestContext(request, {})
     return render(request, 'one/test.html', context)
